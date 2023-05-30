@@ -1,1 +1,27 @@
-<h2>pagina principal</h2>
+<div class="jumbotron">
+  <h1 class="display-4">Bem vindo ao meu projeto node</h1>
+  <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae sapiente odit molestias nesciunt, deserunt voluptate atque qui nobis rerum nihil. Sapiente aut necessitatibus praesentium incidunt nemo! Ea repellat sint at?</p>
+  <hr class="my-4">
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto amet totam sequi officia porro mollitia suscipit necessitatibus alias, adipisci, eos enim! Quas numquam dignissimos nisi nobis ut exercitationem ex beatae?</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/usuarios/registro" role="button">Crie sua conta</a>
+  </p>
+</div>
+
+
+<hr>
+<h2>Postagens recentes:</h2>
+{{#each postagens}}
+<div class="card mt-2">
+    <div class="card-body">
+        <small>{{categoria.nome}}</small>
+        <small>{{data}}</small>
+        <hr>
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+    </div>
+</div>
+{{else}}
+<h4>nenhuma postagem</h4>
+{{/each}}
